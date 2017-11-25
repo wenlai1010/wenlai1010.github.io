@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>有限的时间,无限的知识</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-11-25T16:39:08.399Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Wen Lai</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>之前被我玩坏了，现在完美复活^_^</title>
+    <link href="http://yoursite.com/2017/11/26/%E5%AE%8C%E7%BE%8E%E5%A4%8D%E6%B4%BB/"/>
+    <id>http://yoursite.com/2017/11/26/完美复活/</id>
+    <published>2017-11-25T16:32:42.323Z</published>
+    <updated>2017-11-25T16:39:08.399Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>哪些属性可以隐藏DOM元素？</title>
+    <link href="http://yoursite.com/2017/11/25/%E5%93%AA%E4%BA%9B%E5%B1%9E%E6%80%A7%E5%8F%AF%E4%BB%A5%E4%BD%BFDOM%E5%85%83%E7%B4%A0%E9%9A%90%E8%97%8F/"/>
+    <id>http://yoursite.com/2017/11/25/哪些属性可以使DOM元素隐藏/</id>
+    <published>2017-11-25T15:30:16.854Z</published>
+    <updated>2017-10-29T13:46:17.227Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？"><a href="#CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？" class="headerlink" title="CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？"></a>CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</h5><h6 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h6><p>设置display属性为none；</p><h6 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h6><p>设置visibility属性为hidden，不过元素本身还占位置；</p><h6 id="方法三"><a href="#方法三" class="headerlink" title="方法三:"></a>方法三:</h6><p>设置元素宽高为0；</p><h6 id="方法四"><a href="#方法四" class="headerlink" title="方法四:"></a>方法四:</h6><p>设置透明度为0，不过元素本身还占位置；</p><h6 id="方法五"><a href="#方法五" class="headerlink" title="方法五:"></a>方法五:</h6><p>设置z-index为负数，等。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？&quot;&gt;&lt;a href=&quot;#CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？&quot; class=&quot;headerlink&quot; title=&quot;CSS中可以通过哪些属性定义，使得一
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js 更新了你还在等什么呢</title>
+    <link href="http://yoursite.com/2017/11/25/nodejs%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
+    <id>http://yoursite.com/2017/11/25/nodejs更新了/</id>
+    <published>2017-11-25T15:30:16.853Z</published>
+    <updated>2017-11-02T15:19:23.215Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../images/nodejs.png" alt="实图"></p><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">点击前往下载地址</a></p><ul><li>尴尬的是下载的人太多，服务器承受不了。</li><li>15.9MB 下载了一个小时还没完。。。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;../images/nodejs.png&quot; alt=&quot;实图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点击前往下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iscroll.js 用法介绍</title>
+    <link href="http://yoursite.com/2017/11/25/iscroll.js/"/>
+    <id>http://yoursite.com/2017/11/25/iscroll.js/</id>
+    <published>2017-11-25T15:30:16.841Z</published>
+    <updated>2017-10-30T14:04:44.657Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。"><a href="#iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。" class="headerlink" title="iscroll.js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。"></a><a href="http://iscrolljs.com/" target="_blank" rel="noopener">iscroll.js</a>主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。</h4><h6 id="1-isscroll-js"><a href="#1-isscroll-js" class="headerlink" title="(1)  isscroll.js"></a>(1)  isscroll.js</h6><p>它是通用脚本。包括最常用的功能，并在小占用带宽的同时提供非常高的性能。</p><h6 id="2-iscroll-lite-js"><a href="#2-iscroll-lite-js" class="headerlink" title="(2) iscroll-lite.js"></a>(2) iscroll-lite.js</h6><p>它是主要脚本的精简版本。适合于移动端设备。</p><h6 id="3-iscroll-probe-js"><a href="#3-iscroll-probe-js" class="headerlink" title="(3) iscroll-probe.js"></a>(3) iscroll-probe.js</h6><p>探测当前的滚动位置，正在测试阶段。</p><h6 id="4-iscroll-zoom-js"><a href="#4-iscroll-zoom-js" class="headerlink" title="(4) iscroll-zoom.js"></a>(4) iscroll-zoom.js</h6><p>添加缩放到标准滚动。</p><h6 id="5-iscroll-infinite-js"><a href="#5-iscroll-infinite-js" class="headerlink" title="(5) iscroll-infinite.js"></a>(5) iscroll-infinite.js</h6><p>可以无限次和缓存滚动，处理非常长的元素列表，不适用移动端。</p><h5 id="构建页面和导入iscroll-js"><a href="#构建页面和导入iscroll-js" class="headerlink" title="构建页面和导入iscroll.js:"></a>构建页面和导入iscroll.js:</h5><p>第一步:构建html页面</p><p><code>&lt;div id=&quot;wrapper&quot;&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;...&lt;/ul&gt;&lt;/div&gt;</code></p><p>第二步:启用js脚本</p><p><code>&lt;script type=&quot;text/javascript&quot;&gt;var wrapper = document.getElementById(&#39;wrapper&#39;);var myScroll = new IScroll(wrapper);</code></p><p>第三步:引入js文件</p><p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;iscroll.js&quot;&gt;&lt;/script&gt;</code></p><p>第四步:现在我们基本的功能就实现了，如果有什么需要可以查看其API进行修改，api修改代码在第二步的基础上修改</p><p><code>var myScroll = new IScroll(wrapper,{//在这里面写修改的代码});</code></p><p>​                                                                                                                API请自行查找<a href="http://iscrolljs.com/" target="_blank" rel="noopener">scroll.js官网</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。&quot;&gt;&lt;a href=&quot;#iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。&quot; class=&quot;headerlink&quot; title=&quot;iscroll.js主要是一款屏幕滚
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>fastclick.js 介绍及用法</title>
+    <link href="http://yoursite.com/2017/11/25/fastclick.js/"/>
+    <id>http://yoursite.com/2017/11/25/fastclick.js/</id>
+    <published>2017-11-25T15:30:16.839Z</published>
+    <updated>2017-10-31T14:04:29.922Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>注意;截至2015年底，大多数移动浏览器 - 特别是Chrome和Safari - 不再具有300ms触摸延迟，因此fastclick.js对新浏览器没有任何益处，并且会将错误引入到应用程序中。仔细考虑你是否真的需要使用它。</em></p><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><h6 id="第一步：引入fastclick-js脚本"><a href="#第一步：引入fastclick-js脚本" class="headerlink" title="第一步：引入fastclick.js脚本"></a>第一步：引入fastclick.js脚本</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  src=<span class="string">'./fastclick.js'</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><h6 id="第二步：初始化脚本"><a href="#第二步：初始化脚本" class="headerlink" title="第二步：初始化脚本"></a>第二步：初始化脚本</h6><p>纯js代码时</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="string">'addEventListener'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>有jQuery时</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>又或者你正在使用Browserify或其他CommonJS风格的模块系统时：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> attachFastClick = <span class="built_in">require</span>(<span class="string">'fastclick'</span>);</span><br><span class="line">attachFastClick(<span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure><p><a href="https://github.com/ftlabs/fastclick" target="_blank" rel="noopener">点击去fastclick.js源代码地址</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;em&gt;注意;截至2015年底，大多数移动浏览器 - 特别是Chrome和Safari - 不再具有300ms触摸延迟，因此fastclick.js对新浏览器没有任何益处，并且会将错误引入到应用程序中。仔细考虑你是否真的需要使用它。&lt;/em&gt;&lt;/p&gt;
+&lt;h5 id=&quot;用法&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>下载提速方法</title>
+    <link href="http://yoursite.com/2017/11/25/%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/"/>
+    <id>http://yoursite.com/2017/11/25/下载速度/</id>
+    <published>2017-11-25T15:30:16.838Z</published>
+    <updated>2017-11-02T15:45:28.711Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦"><a href="#把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦" class="headerlink" title="把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦"></a>把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦&quot;&gt;&lt;a href=&quot;#把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦&quot; class=&quot;headerlink&quot; title=&quot;把下载地址直接复制下来，粘贴
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何垂直居中一个元素和图片</title>
+    <link href="http://yoursite.com/2017/11/25/%E5%A6%82%E4%BD%95%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0/"/>
+    <id>http://yoursite.com/2017/11/25/如何垂直居中一个浮动元素/</id>
+    <published>2017-11-25T15:30:16.810Z</published>
+    <updated>2017-10-27T13:55:56.520Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="如垂直居中一个元素"><a href="#如垂直居中一个元素" class="headerlink" title="如垂直居中一个元素"></a>如垂直居中一个元素</h5><h6 id="方法一-已知元素的高宽"><a href="#方法一-已知元素的高宽" class="headerlink" title="方法一:已知元素的高宽"></a>方法一:已知元素的高宽</h6><p>$$<br>选择器{<br>    background-color: red;<br>    width:200px;<br>    height:200px;<br>    position: absolute;        //父元素需要相对定位<br>    top: 50%;<br>    left: 50%;<br>    margin-top:-100px ;   //二分之一的height，width<br>    margin-left: -100px;<br>    }<br>$$</p><h6 id="方法二-未知元素的高宽"><a href="#方法二-未知元素的高宽" class="headerlink" title="方法二:未知元素的高宽"></a>方法二:未知元素的高宽</h6><p>$$<br> 选择器{<br>    width: 200px;<br>    height: 200px;<br>    background-color: red;<br>    margin:auto;<br>    position: absolute;        //父元素需要相对定位<br>    left: 0;<br>    top: 0;<br>    right: 0;<br>    bottom: 0;<br>    }<br>$$</p><h5 id="如果是垂直居中一张图片"><a href="#如果是垂直居中一张图片" class="headerlink" title="如果是垂直居中一张图片"></a>如果是垂直居中一张图片</h5><p>$$<br>选择器     //<img>的容器设置如下<br>{<br>    display:table-cell;<br>    text-align:center;<br>    vertical-align:middle;<br>}<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;如垂直居中一个元素&quot;&gt;&lt;a href=&quot;#如垂直居中一个元素&quot; class=&quot;headerlink&quot; title=&quot;如垂直居中一个元素&quot;&gt;&lt;/a&gt;如垂直居中一个元素&lt;/h5&gt;&lt;h6 id=&quot;方法一-已知元素的高宽&quot;&gt;&lt;a href=&quot;#方法一-已知元素的高宽&quot; c
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/11/25/hello-world/"/>
+    <id>http://yoursite.com/2017/11/25/hello-world/</id>
+    <published>2017-11-25T15:01:07.082Z</published>
+    <updated>2017-11-25T15:01:07.082Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
