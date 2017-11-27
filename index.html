@@ -145,6 +145,165 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Vue.js-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/27/Vue.js-01/">Vue.js 01</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/27/Vue.js-01/" class="archive-article-date">
+  	<time datetime="2017-11-27T09:04:31.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="../images/vuelogo.png" alt=""></p>
+<h2 id="单页面应用程序"><a href="#单页面应用程序" class="headerlink" title="单页面应用程序"></a>单页面应用程序</h2><ul>
+<li>Single Page Application（SPA）</li>
+</ul>
+<ul>
+<li>Single Page Application（SPA）</li>
+<li>从字面意义来看就是一个网站就一个页面<ul>
+<li>coding</li>
+<li>网易云音乐</li>
+<li>极致用户体验，就像 native app 一样。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>优点</p>
+<ul>
+<li><p>分离前后端关注点，前端负责界面显示，后端负责数据存储和计算，各司其职，不会把前后端的逻辑混杂在一起</p>
+</li>
+<li><p>1、具有桌面应用的即时性、网站的可移植性和可访问性。<br>2、用户体验好、快，内容的改变不需要重新加载整个页面，web应用更具响应性和更令人着迷。<br>3、基于上面一点，SPA相对对服务器压力小。<br>4、良好的前后端分离。SPA和RESTful架构一起使用，后端不再负责模板渲染、输出页面工作，web前端和各种移动终端地位对等，后端API通用化。<br>5、对前端人员javascript技能要求更高，促使团队技能提升。作者：洞妖洞妖我系洞两链接：<a href="https://www.zhihu.com/question/20792064/answer/37808081" target="_blank" rel="noopener">https://www.zhihu.com/question/20792064/answer/37808081</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>缺点<ul>
+<li>致命缺点：SEO 问题，搜索引擎优化</li>
+<li>目前也有一些对应的解决方案：但是都不够完美</li>
+<li>1、不利于SEO。<br>2、初次加载耗时相对增多。<br>3、导航不可用，如果一定要导航需要自行实现前进、后退。<br>4、对开发人员技能水平、开发成本高。</li>
+</ul>
+</li>
+</ul>
+<h3 id="简单模拟单页面应用程序的效果"><a href="#简单模拟单页面应用程序的效果" class="headerlink" title="简单模拟单页面应用程序的效果"></a>简单模拟单页面应用程序的效果</h3><ul>
+<li><code>hash</code></li>
+<li><code>window.onhashchange</code> 事件</li>
+<li>当 hash 改变的时候，根据不同的 hash 做不同处理</li>
+</ul>
+<h3 id="主流前端-JavaScript-框架"><a href="#主流前端-JavaScript-框架" class="headerlink" title="主流前端 JavaScript 框架"></a>主流前端 JavaScript 框架</h3><ul>
+<li>Angular<ul>
+<li>09年 原来是个人开发的，后来被 Google 给收购了</li>
+</ul>
+</li>
+<li>React<ul>
+<li>诞生于 Facebook 公司内部</li>
+</ul>
+</li>
+<li>Vue.js<ul>
+<li>尤雨溪（中国江苏无锡人，12 年左右）</li>
+</ul>
+</li>
+</ul>
+<h2 id="Vue-js-介绍"><a href="#Vue-js-介绍" class="headerlink" title="Vue.js 介绍"></a>Vue.js 介绍</h2><ul>
+<li>是什么<ul>
+<li>前端 JavaScript 框架</li>
+</ul>
+</li>
+<li>为什么用它<ul>
+<li>它能帮助提升网站应用程序开发效率</li>
+</ul>
+</li>
+<li><p>一般什么情况下使用它</p>
+<ul>
+<li>一般是需要开发 SPA 应用程序的时候去用</li>
+<li><p>但是 Vue 是渐进式的，Vue 其实可以融入到不同的项目中</p>
+<p>可以和传统的网站开发架构融合在一起，例如可以简单的把它当作一个类似 jQUery 的库来使用</p>
+<p>也可以使用它开发大型的 SPA 单页面应用程序</p>
+</li>
+</ul>
+</li>
+<li><p>发展历史</p>
+<ul>
+<li><p>作者：尤雨溪（微博：尤小右）。</p>
+<p><a href="http://evanyou.me/" target="_blank" rel="noopener">个人网站</a>        <a href="https://www.zhihu.com/people/evanyou/activities" target="_blank" rel="noopener">知乎</a>    <a href="http://weibo.com/arttechdesign" target="_blank" rel="noopener">新浪微博</a></p>
+<ul>
+<li><p>作者尤雨溪最初在 2013 年 12 月 8号在 GitHub 上发布了 0.6 版</p>
+<ul>
+<li><p>2015 年 10 月份正式发布了 1.0 版本</p>
+<p>Vue 真正的火起来就是在 15 年的 1.0 版发布之后才简陋头角</p>
+</li>
+<li>2016 年 10 月份正式发布了 2.0 版</li>
+<li>截止到 2017-11-9 16:24:15 最新版是 2.5.3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>相关资源<ul>
+<li><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">Github</a></li>
+<li><a href="http://vuejs.org/" target="_blank" rel="noopener">英文官网</a></li>
+<li><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">中文官网</a></li>
+<li><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">官方教程</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener">API 参考文档</a></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/27/Vue.js-01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-完美复活" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
