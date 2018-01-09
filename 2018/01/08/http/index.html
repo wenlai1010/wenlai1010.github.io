@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/08/http/index.html">
 <meta property="og:site_name" content="有限的时间,无限的知识">
 <meta property="og:description" content="概念定义http( HyperText Transfer Protocol, 超文本传输协议) 最早就是计算机与计算机之间沟通的一种协议，这种协议限制了通讯内容的格式以及各项内容的含义。随着时代的发展，技术的变迁，这种协议现在广泛的应用在各种领域，也不仅仅局限于计算机与计算机之间，手机、电脑等各种智能设备很多时候都在使用这种协议通讯，所以一般现在称HTTP为端与端之间的通讯协议 应用软件架构一般分">
-<meta property="og:updated_time" content="2018-01-08T04:55:14.785Z">
+<meta property="og:updated_time" content="2018-01-09T05:08:14.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http">
 <meta name="twitter:description" content="概念定义http( HyperText Transfer Protocol, 超文本传输协议) 最早就是计算机与计算机之间沟通的一种协议，这种协议限制了通讯内容的格式以及各项内容的含义。随着时代的发展，技术的变迁，这种协议现在广泛的应用在各种领域，也不仅仅局限于计算机与计算机之间，手机、电脑等各种智能设备很多时候都在使用这种协议通讯，所以一般现在称HTTP为端与端之间的通讯协议 应用软件架构一般分">
@@ -190,10 +190,44 @@
 <li><p>请求方式+空格+请求路径+空格+HTTP协议版本</p>
 </li>
 <li><p>请求头：客户端想要告诉服务端的一些额外信息，以下为常见的请求头 ↓</p>
-<p>| 键               | 值                           |<br>| :————– | ————————— |<br>| Host            | 请求的主机                       |<br>| Cache-Control   | 控制缓存（例如：max-age=60 缓存 60 秒） |<br>| Accept          | 客户端想要接收的文档类型，逗号分隔           |<br>| User-Agent      | 标识什么客户端帮你发送的这次请求            |<br>| Referer         | 这次请求的来源                     |<br>| Accept-Encoding | 可以接收的压缩编码                   |</p>
 </li>
-<li><p>请求体：这次请求客户端想要发送给服务端的数据正文，一般在GET请求请求时很少用到，应为GET请求主观上都是去 <strong>拿东西</strong>。</p>
-</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">键</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Host</td>
+<td>请求的主机</td>
+</tr>
+<tr>
+<td style="text-align:left">Cache-Control</td>
+<td>控制缓存（例如：max-age=60 缓存 60 秒）</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept</td>
+<td>客户端想要接收的文档类型，逗号分隔</td>
+</tr>
+<tr>
+<td style="text-align:left">User-Agent</td>
+<td>标识什么客户端帮你发送的这次请求</td>
+</tr>
+<tr>
+<td style="text-align:left">Referer</td>
+<td>这次请求的来源</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Encoding</td>
+<td>可以接收的压缩编码</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>请求体：这次请求客户端想要发送给服务端的数据正文，一般在GET请求请求时很少用到，应为GET请求主观上都是去 <strong>拿东西</strong>。</li>
 </ol>
 <h4 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h4><ol>
 <li><p>状态行：HTTP/1.1 200 ok</p>
@@ -201,10 +235,36 @@
 <li><p>HTTP协议版本 + 空格 + 状态码 + 空格 + 状态描述</p>
 </li>
 <li><p>响应头：服务端想要告诉客户端的一些额外信息，常见的有 ↓ </p>
-<p>| 键              | 值       |<br>| ————– | ——- |<br>| Date           | 响应时间    |<br>| Server         | 服务器信息   |<br>| Content-Type   | 响应的内容类型 |<br>| Content-Length | 响应的内容大小 |</p>
 </li>
-<li><p>响应体：这次请求服务端想要返回给客户端的数据正文，一般返回的都是HTML，也可以返回javascript和css</p>
-</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>键</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>响应时间</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>服务器信息</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>响应的内容类型</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>响应的内容大小</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>响应体：这次请求服务端想要返回给客户端的数据正文，一般返回的都是HTML，也可以返回javascript和css</li>
 </ol>
 <h5 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h5><ul>
 <li><p>设置响应文件类型</p>
@@ -226,13 +286,22 @@
 </li>
 <li><p>POST:     发，给</p>
 <ul>
-<li><p>对比GET与POST</p>
-<p>|          | GET                                      | POST                                     |<br>| :——- | —————————————- | —————————————- |<br>| 后退按钮/刷新  | 无害                                       | 数据会被重新提交（浏览器应该告知用户数据会被重新提交）              |<br>| 书签       | 可收藏为书签                                   | 不可收藏为书签                                  |<br>| 缓存       | 能被缓存                                     | 不能缓存                                     |<br>| 编码类型     | application/x-www-form-urlencoded        | application/x-www-form-urlencoded或multipart/form-data.为二进制数据使用多重编码 |<br>| 历史       | 参数保留在浏览器历史中                              | 参数不会保存在浏览器历史中                            |<br>| 对数据长度的限制 | 有，当发送数据时，GET方法想url添加数据，URL的最大长度是2048个字符。 | 无限制                                      |<br>| 对数据类型的限制 | 只允许ASCII字符                               | 没有限制也允许二进制数据                             |<br>| 安全性      | 与post相比，GET的安全性较差，因为所发送的数据是URL的一部分。在发送密码或其他敏感信息是绝不要使用GET | POST比GET更安全，因为参数不会被保存在浏览器历史或web服务器日志中。   |<br>| 可见性      | 数据在URL中对所有人都是可见的                         | 数据不会显示在URL中                              |</p>
-</li>
+<li>对比GET与POST</li>
 </ul>
 </li>
 </ul>
-<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>状态码由三为数字组成，第一个数字定义了响应的类别</p>
+<pre><code>|          | GET                                      | POST                                     |
+| :------- | ---------------------------------------- | ---------------------------------------- |
+| 后退按钮/刷新  | 无害                                       | 数据会被重新提交（浏览器应该告知用户数据会被重新提交）              |
+| 书签       | 可收藏为书签                                   | 不可收藏为书签                                  |
+| 缓存       | 能被缓存                                     | 不能缓存                                     |
+| 编码类型     | application/x-www-form-urlencoded        | application/x-www-form-urlencoded或multipart/form-data.为二进制数据使用多重编码 |
+| 历史       | 参数保留在浏览器历史中                              | 参数不会保存在浏览器历史中                            |
+| 对数据长度的限制 | 有，当发送数据时，GET方法想url添加数据，URL的最大长度是2048个字符。 | 无限制                                      |
+| 对数据类型的限制 | 只允许ASCII字符                               | 没有限制也允许二进制数据                             |
+| 安全性      | 与post相比，GET的安全性较差，因为所发送的数据是URL的一部分。在发送密码或其他敏感信息是绝不要使用GET | POST比GET更安全，因为参数不会被保存在浏览器历史或web服务器日志中。   |
+| 可见性      | 数据在URL中对所有人都是可见的                         | 数据不会显示在URL中                              |
+</code></pre><h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>状态码由三为数字组成，第一个数字定义了响应的类别</p>
 <ul>
 <li>1**：提示信息—-表示请求已接收，继续处理。</li>
 <li>2**：成功—-表示请求已成功接受。</li>
@@ -347,6 +416,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/01/09/form表单/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          form 表单
+        
+      </div>
+    </a>
   
   
     <a href="/2017/11/29/Vue.js-02/" id="article-nav-older" class="article-nav-link-wrap">
