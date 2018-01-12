@@ -145,6 +145,150 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-nodejs更新了" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/25/nodejs更新了/">Node.js 更新了你还在等什么呢</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/25/nodejs更新了/" class="archive-article-date">
+  	<time datetime="2017-11-25T15:30:16.853Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="../images/nodejs.png" alt="实图"></p>
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">点击前往下载地址</a></p>
+<ul>
+<li>尴尬的是下载的人太多，服务器承受不了。</li>
+<li>15.9MB 下载了一个小时还没完。。。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/25/nodejs更新了/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-iscroll.js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/25/iscroll.js/">iscroll.js 用法介绍</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/25/iscroll.js/" class="archive-article-date">
+  	<time datetime="2017-11-25T15:30:16.841Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。"><a href="#iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。" class="headerlink" title="iscroll.js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。"></a><a href="http://iscrolljs.com/" target="_blank" rel="noopener">iscroll.js</a>主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。</h4><h6 id="1-isscroll-js"><a href="#1-isscroll-js" class="headerlink" title="(1)  isscroll.js"></a>(1)  isscroll.js</h6><p>它是通用脚本。包括最常用的功能，并在小占用带宽的同时提供非常高的性能。</p>
+<h6 id="2-iscroll-lite-js"><a href="#2-iscroll-lite-js" class="headerlink" title="(2) iscroll-lite.js"></a>(2) iscroll-lite.js</h6><p>它是主要脚本的精简版本。适合于移动端设备。</p>
+<h6 id="3-iscroll-probe-js"><a href="#3-iscroll-probe-js" class="headerlink" title="(3) iscroll-probe.js"></a>(3) iscroll-probe.js</h6><p>探测当前的滚动位置，正在测试阶段。</p>
+<h6 id="4-iscroll-zoom-js"><a href="#4-iscroll-zoom-js" class="headerlink" title="(4) iscroll-zoom.js"></a>(4) iscroll-zoom.js</h6><p>添加缩放到标准滚动。</p>
+<h6 id="5-iscroll-infinite-js"><a href="#5-iscroll-infinite-js" class="headerlink" title="(5) iscroll-infinite.js"></a>(5) iscroll-infinite.js</h6><p>可以无限次和缓存滚动，处理非常长的元素列表，不适用移动端。</p>
+<h5 id="构建页面和导入iscroll-js"><a href="#构建页面和导入iscroll-js" class="headerlink" title="构建页面和导入iscroll.js:"></a>构建页面和导入iscroll.js:</h5><p>第一步:构建html页面</p>
+<p><code>&lt;div id=&quot;wrapper&quot;&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;...&lt;/ul&gt;&lt;/div&gt;</code></p>
+<p>第二步:启用js脚本</p>
+<p><code>&lt;script type=&quot;text/javascript&quot;&gt;var wrapper = document.getElementById(&#39;wrapper&#39;);var myScroll = new IScroll(wrapper);</code></p>
+<p>第三步:引入js文件</p>
+<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;iscroll.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>第四步:现在我们基本的功能就实现了，如果有什么需要可以查看其API进行修改，api修改代码在第二步的基础上修改</p>
+<p><code>var myScroll = new IScroll(wrapper,{//在这里面写修改的代码});</code></p>
+<p>​                                                                                                                API请自行查找<a href="http://iscrolljs.com/" target="_blank" rel="noopener">scroll.js官网</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/25/iscroll.js/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-fastclick.js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
