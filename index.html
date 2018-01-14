@@ -145,6 +145,129 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第二章 day04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/14/第二章 day04/">《疯狂HTML CSS3 JavaScript讲义》 读书笔记 第二章 HTML5的拖放API day04</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/14/第二章 day04/" class="archive-article-date">
+  	<time datetime="2018-01-14T11:23:16.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="HTML5新增的-拖放API"><a href="#HTML5新增的-拖放API" class="headerlink" title="HTML5新增的 拖放API"></a>HTML5新增的 拖放API</h2><p> <em>拖放API可以让HTML页面的任意元素都变成可拖动的，通过使用拖放机制可以开发出更友好的人机交互界面</em></p>
+<p>拖放操作可以分成两个动作：在某个元素上按下鼠标并移动鼠标（没有松开鼠标），此时开始拖动；在拖动过程中，只要没有松开鼠标，将会不断产生拖动事件——这个过程被称为“拖”；把被拖动的元素拖到另外一个元素上并松开鼠标——这个动作被称为“放”。拖放操作由“拖”和“放”两个动作组成。</p>
+<h3 id="1-启动拖动"><a href="#1-启动拖动" class="headerlink" title="1. 启动拖动"></a>1. 启动拖动</h3><p>​    在HTML5中，<code>&lt;img.../&gt;</code>元素默认就是可以拖动的；而<code>&lt;a.../&gt;</code>元素只要设置了href属性，它默认也是可拖动的</p>
+<p>​    对于普通元素而言，如果希望把它变成可拖动的，只要把该元素的draggable属性设为true即可。此时因为设置了draggable=“true”，表示该元素可拖动，但拖动是并未携带数据，因此用户看不到拖动效果。</p>
+<p>​    为了让拖动操作能携带数据，应该为被拖动元素的ondragstart事件指定监听器，在该监听器中让拖动操作可以携带数据。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>html5的拖放API<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    #one &#123;</span></span><br><span class="line"><span class="undefined">      width: 100px;</span></span><br><span class="line"><span class="undefined">      height: 100px;</span></span><br><span class="line"><span class="undefined">      border: 1px solid black;</span></span><br><span class="line"><span class="undefined">      background-color: red;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"one"</span> <span class="attr">draggable</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    看世间，万物皆虚妄。</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    const one = document.getElementById("one");</span></span><br><span class="line"><span class="undefined">    one.ondragstart = function(evt)&#123;</span></span><br><span class="line"><span class="undefined">      evt.dataTransfer.setData("text/plain" , "wenlai1010.github.io");  //让拖动操作携带数据</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-接受“放”"><a href="#2-接受“放”" class="headerlink" title="2.接受“放”"></a>2.接受“放”</h3><p>​    由上可以看到不管拖动到哪里，都显示一个禁止的标志，这是因为当被拖动元素“拖过”document对象时，document对象默认阻止了拖动事件，因此他们不能接受“放”。</p>
+<p>​    为了让document可以接受“放”，应该为document的ondragover事件指定监视器，在监视器中取消document对拖动事件的默认行为。例如，在上面的JavaScript代码后面增加如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.ondragover = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    因为不同浏览器对于拖放操作的默认动作不相同，如果希望取消拖放操作的默认动作，则可以为document的ondrop事件绑定监听器。增加如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.ondrop = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用户拖放HTML元素的过程中可能触发的事件如下：</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>事件源</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ondragstart</td>
+<td>被拖动的HTML元素</td>
+<td>开始拖动时触发该事件</td>
+</tr>
+<tr>
+<td>ondrag</td>
+<td>被拖到的HTML元素</td>
+<td>拖动过程中不断触发该事件</td>
+</tr>
+<tr>
+<td>ondragend</td>
+<td>被脱动的HTML元素</td>
+<td>拖动结束时触发该事件</td>
+</tr>
+<tr>
+<td>ondragenter</td>
+<td>拖动时鼠标经过的元素</td>
+<td>拖动的元素进入本元素的范围时触发该事件</td>
+</tr>
+<tr>
+<td>ondragover</td>
+<td>拖动时鼠标经过的元素</td>
+<td>被拖动的元素进入本元素的范围内拖动时会不断地触动该事件</td>
+</tr>
+<tr>
+<td>ondragleaver</td>
+<td>拖动时鼠标进过的元素</td>
+<td>被拖动的元素离开本元素时触发该事件</td>
+</tr>
+<tr>
+<td>ondrop</td>
+<td>拖动时鼠标经过的元素</td>
+<td>其它元素被放到了本元素中时触发该事件</td>
+</tr>
+</tbody>
+</table>
+<p>如果要实现一个可自由拖动的<code>&lt;div.../&gt;</code>如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>html5的拖放API<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    #one &#123;</span></span><br><span class="line"><span class="undefined">      width: 100px;</span></span><br><span class="line"><span class="undefined">      height: 100px;</span></span><br><span class="line"><span class="undefined">      border: 1px solid black;</span></span><br><span class="line"><span class="undefined">      background-color: red;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"one"</span> <span class="attr">draggable</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    看世间，万物皆虚妄。</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> one = <span class="built_in">document</span>.getElementById(<span class="string">"one"</span>);</span></span><br><span class="line"><span class="javascript">    one.ondragstart = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      evt.dataTransfer.setData(<span class="string">"text/plain"</span> , <span class="string">"wenlai1010.github.io"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.ondragover = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.ondrop = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      one.style.position = <span class="string">"absolute"</span>;</span></span><br><span class="line"><span class="javascript">      one.style.left = evt.pageX + <span class="string">"px"</span>;</span></span><br><span class="line"><span class="javascript">      one.style.top = evt.pageY +<span class="string">"px"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="literal">false</span>;  <span class="comment">//取消事件的默认行为</span></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>拖动时默认左上角为拖动点</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/14/第二章 day04/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第二章 day03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1450,73 +1573,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/26/完美复活/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-哪些属性可以使DOM元素隐藏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/哪些属性可以使DOM元素隐藏/">哪些属性可以隐藏DOM元素？</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/哪些属性可以使DOM元素隐藏/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？"><a href="#CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？" class="headerlink" title="CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？"></a>CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</h5><h6 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h6><p>设置display属性为none；</p>
-<h6 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h6><p>设置visibility属性为hidden，不过元素本身还占位置；</p>
-<h6 id="方法三"><a href="#方法三" class="headerlink" title="方法三:"></a>方法三:</h6><p>设置元素宽高为0；</p>
-<h6 id="方法四"><a href="#方法四" class="headerlink" title="方法四:"></a>方法四:</h6><p>设置透明度为0，不过元素本身还占位置；</p>
-<h6 id="方法五"><a href="#方法五" class="headerlink" title="方法五:"></a>方法五:</h6><p>设置z-index为负数，等。。。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/哪些属性可以使DOM元素隐藏/">展开全文 >></a>
         </p>
       
 
