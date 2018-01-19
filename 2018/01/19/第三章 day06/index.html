@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>有限的时间,无限的知识</title>
+  <title>HTML原有的表单及表单控件 | 有限的时间,无限的知识</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="有限的时间,无限的知识">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="表单元素​    &amp;lt;form.../&amp;gt;元素用于生产输入表单，该元素不会生成可视化部分。在HTML5规范以前，其它表单控件，如单行文本框、多行文本域、单选按钮、复选框等都必须放在&amp;lt;form.../&amp;gt;元素之内。 ​    &amp;lt;form.../&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML原有的表单及表单控件">
+<meta property="og:url" content="http://yoursite.com/2018/01/19/第三章 day06/index.html">
 <meta property="og:site_name" content="有限的时间,无限的知识">
+<meta property="og:description" content="表单元素​    &amp;lt;form.../&amp;gt;元素用于生产输入表单，该元素不会生成可视化部分。在HTML5规范以前，其它表单控件，如单行文本框、多行文本域、单选按钮、复选框等都必须放在&amp;lt;form.../&amp;gt;元素之内。 ​    &amp;lt;form.../&amp;gt;元素可以指定id、style、class等核心属性，还可以指定onclick等事件属性。除此之外还可以指定action,met">
+<meta property="og:updated_time" content="2018-01-19T14:04:16.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有限的时间,无限的知识">
+<meta name="twitter:title" content="HTML原有的表单及表单控件">
+<meta name="twitter:description" content="表单元素​    &amp;lt;form.../&amp;gt;元素用于生产输入表单，该元素不会生成可视化部分。在HTML5规范以前，其它表单控件，如单行文本框、多行文本域、单选按钮、复选框等都必须放在&amp;lt;form.../&amp;gt;元素之内。 ​    &amp;lt;form.../&amp;gt;元素可以指定id、style、class等核心属性，还可以指定onclick等事件属性。除此之外还可以指定action,met">
   
     <link rel="alternative" href="/atom.xml" title="有限的时间,无限的知识" type="application/atom+xml">
   
@@ -143,128 +147,99 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Vue.js-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-第三章 day06" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/27/Vue.js-01/">Vue.js 01</a>
+    <h1 class="article-title" itemprop="name">
+      HTML原有的表单及表单控件
     </h1>
   
 
         
-        <a href="/2017/11/27/Vue.js-01/" class="archive-article-date">
-  	<time datetime="2017-11-27T09:04:31.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
+        <a href="/2018/01/19/第三章 day06/" class="archive-article-date">
+  	<time datetime="2018-01-19T13:57:03.748Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="../images/vuelogo.png" alt=""></p>
-<h2 id="单页面应用程序"><a href="#单页面应用程序" class="headerlink" title="单页面应用程序"></a>单页面应用程序</h2><ul>
-<li>Single Page Application（SPA）</li>
-</ul>
+        <h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><p>​    <code>&lt;form.../&gt;</code>元素用于生产输入表单，该元素不会生成可视化部分。在HTML5规范以前，其它表单控件，如单行文本框、多行文本域、单选按钮、复选框等都必须放在<code>&lt;form.../&gt;</code>元素之内。</p>
+<p>​    <code>&lt;form.../&gt;</code>元素可以指定id、style、class等核心属性，还可以指定onclick等事件属性。除此之外还可以指定<code>action,method,enctype,name,target</code></p>
+<p>​    <code>&lt;form.../&gt;</code>元素method属性非常重要，它指定可该表单提交请求的方式，表单默认以GET方式提交请求。</p>
+<p>​    表单的enctype属性用于指定表单数据的编码方式，有如下3个值：</p>
 <ul>
-<li>Single Page Application（SPA）</li>
-<li>从字面意义来看就是一个网站就一个页面<ul>
-<li>coding</li>
-<li>网易云音乐</li>
-<li>极致用户体验，就像 native app 一样。</li>
+<li>application/x-www-form-urlencoded: 这是默认的编码方式，它只处理表单控件里的value属性值，采用这种编码方式的表单会将表单控件的值处理成URL编码方式</li>
+<li>multipart/form-data: 这种编码方式会以二进制的方式来处理表单数据，这种编码方式会把文件域指定文件的内容也封装到请求参数里。当需要通过表单上传文件时使用该属性值</li>
+<li>text/plain: 当表单的action属性值为mailto:URL的形式时使用这种编码方式比较方便，这种编码方式主要适应于直接通过表单发送邮件的方式</li>
 </ul>
-</li>
-</ul>
+<p>当在<code>&lt;form.../&gt;</code>元素里定义一个或多个表单空间时，一旦提交该表单，该表单里的表单控件将会转换成请求参数。规则如下：</p>
 <ul>
-<li><p>优点</p>
-<ul>
-<li><p>分离前后端关注点，前端负责界面显示，后端负责数据存储和计算，各司其职，不会把前后端的逻辑混杂在一起</p>
+<li>每个有name属性的表单控件对应一个请求参数，没有name属性的表单控件不会生成请求参数</li>
+<li>如果多个表单控件有相同的name属性，则多个表单控件只生成一个请求参数，只是该参数有多个值</li>
+<li>表单控件的name属性指定请求参数名，value属性指定请求参数</li>
+<li>如果某个表单控件设置了disabled或disabled=“disabled”属性，则该表单控件不再生成请求参数</li>
+</ul>
+<h3 id="使用input元素"><a href="#使用input元素" class="headerlink" title="使用input元素"></a>使用input元素</h3><ul>
+<li>单行文本框：    <code>&lt;input type=&quot;text&quot; /&gt;</code></li>
+<li>密码输入框：<code>&lt;input type=&quot;password&quot; /&gt;</code></li>
+<li>隐藏域：        <code>&lt;input type=&quot;hidden&quot; /&gt;</code></li>
+<li>单选框：        <code>&lt;input type=&quot;radio&quot; /&gt;</code></li>
+<li>复选框：        <code>&lt;input type=&quot;checkbox&quot; /&gt;</code></li>
+<li>图像域：        <code>&lt;input type=&quot;image&quot; /&gt;</code> ，此时，可以为<code>&lt;input.../&gt;</code>元素指定width和height两个属性</li>
+<li>文本上传域：<code>&lt;input type=&quot;file&quot; /&gt;</code></li>
+<li>提交：            <code>&lt;input type=&quot;submit&quot; /&gt;</code></li>
+<li>重设：            <code>&lt;input type=&quot;reset&quot; /&gt;</code></li>
+<li><p>无动作按钮：<code>&lt;input type=&quot;button&quot; /&gt;</code></p>
+<p>​在是上面这些表单控件中，单行文本框、密码输入框、都用于接收用户输入，而隐藏域不能接收用户输入，也不能生产可视化部分，它用于提交额外的请求参数，请求参数的值就是该赢藏域的value属性值，因此定义赢藏域的同时应指定value属性值</p>
+<p>​单选框、复选框不能接收用户输入，因此定义它们时同时也会指定value属性值，用于设置它们所对应的请求参数值。对于单选框、复选框而言，当它们被勾选后，它们才会生成对应的请求参数值</p>
+<p>​文件上传域会生成一个单行文本框和一个“浏览“按钮，该文件上传域允许用户浏览本地磁盘文件，并将该文件上传到服务器</p>
+<p>​图像域和提交按钮的作用基本一样，单击它们都会导致表单被提交，区别是图像域是一个图像按钮</p>
+<p>​重设按钮的作用是清空表单内用户的输入，将表单内所有表单控件的值恢复到初始状态</p>
+<p>​无动作按钮，只是一个按钮，在默认情况下，单击该按钮对表单不会有任何作用。通常为该按钮编写javascript脚本来响应它的单击、双击等事件</p>
+<p>​<code>&lt;input.../&gt;</code>元素可以指定id、style、class等核心属性，也可以指定onclick等事件属性，还可以指定onfocus、onblur等焦点事件属性。除此之外，还可以指定：</p>
 </li>
-<li><p>1、具有桌面应用的即时性、网站的可移植性和可访问性。<br>2、用户体验好、快，内容的改变不需要重新加载整个页面，web应用更具响应性和更令人着迷。<br>3、基于上面一点，SPA相对对服务器压力小。<br>4、良好的前后端分离。SPA和RESTful架构一起使用，后端不再负责模板渲染、输出页面工作，web前端和各种移动终端地位对等，后端API通用化。<br>5、对前端人员javascript技能要求更高，促使团队技能提升。作者：洞妖洞妖我系洞两链接：<a href="https://www.zhihu.com/question/20792064/answer/37808081" target="_blank" rel="noopener">https://www.zhihu.com/question/20792064/answer/37808081</a></p>
+<li><p>checked：设置单选框、复选框初始状态是否处于选择状态，该属性值只能是checked，表示初始即被选中。只有当type属性值为checkbox或radio时才可指定该属性</p>
 </li>
+<li>disabled：设置首次加载时禁用此元素。该属性值只能是disabled，表示该属性被禁用，则该元素无法获得输入焦点、无法选中、无法在其中输入文本，无法响应鼠标单击、双击事件。当type=“hidden”时不能指定该属性</li>
+<li>maxlength：该属性值是一个数字，指定文本框中所允许输入的最大字符数</li>
+<li>readonly：指定该文本框内的值不允许用户修改（可以使用javascript）脚本修改</li>
+<li>size：该属性值是一个数字，指定该元素的宽度。当type=“hidden”时不能指定</li>
+<li>src：指定图像域所显示图像的URL，只有当type=“image”时才可指定该属性</li>
 </ul>
-</li>
-</ul>
-<ul>
-<li>缺点<ul>
-<li>致命缺点：SEO 问题，搜索引擎优化</li>
-<li>目前也有一些对应的解决方案：但是都不够完美</li>
-<li>1、不利于SEO。<br>2、初次加载耗时相对增多。<br>3、导航不可用，如果一定要导航需要自行实现前进、后退。<br>4、对开发人员技能水平、开发成本高。</li>
-</ul>
-</li>
-</ul>
-<h3 id="简单模拟单页面应用程序的效果"><a href="#简单模拟单页面应用程序的效果" class="headerlink" title="简单模拟单页面应用程序的效果"></a>简单模拟单页面应用程序的效果</h3><ul>
-<li><code>hash</code></li>
-<li><code>window.onhashchange</code> 事件</li>
-<li>当 hash 改变的时候，根据不同的 hash 做不同处理</li>
-</ul>
-<h3 id="主流前端-JavaScript-框架"><a href="#主流前端-JavaScript-框架" class="headerlink" title="主流前端 JavaScript 框架"></a>主流前端 JavaScript 框架</h3><ul>
-<li>Angular<ul>
-<li>09年 原来是个人开发的，后来被 Google 给收购了</li>
-</ul>
-</li>
-<li>React<ul>
-<li>诞生于 Facebook 公司内部</li>
-</ul>
-</li>
-<li>Vue.js<ul>
-<li>尤雨溪（中国江苏无锡人，12 年左右）</li>
-</ul>
-</li>
-</ul>
-<h2 id="Vue-js-介绍"><a href="#Vue-js-介绍" class="headerlink" title="Vue.js 介绍"></a>Vue.js 介绍</h2><ul>
-<li>是什么<ul>
-<li>前端 JavaScript 框架</li>
-</ul>
-</li>
-<li>为什么用它<ul>
-<li>它能帮助提升网站应用程序开发效率</li>
-</ul>
-</li>
-<li><p>一般什么情况下使用它</p>
-<ul>
-<li>一般是需要开发 SPA 应用程序的时候去用</li>
-<li><p>但是 Vue 是渐进式的，Vue 其实可以融入到不同的项目中</p>
-<p>可以和传统的网站开发架构融合在一起，例如可以简单的把它当作一个类似 jQUery 的库来使用</p>
-<p>也可以使用它开发大型的 SPA 单页面应用程序</p>
-</li>
-</ul>
-</li>
-<li><p>发展历史</p>
-<ul>
-<li><p>作者：尤雨溪（微博：尤小右）。</p>
-<p><a href="http://evanyou.me/" target="_blank" rel="noopener">个人网站</a>        <a href="https://www.zhihu.com/people/evanyou/activities" target="_blank" rel="noopener">知乎</a>    <a href="http://weibo.com/arttechdesign" target="_blank" rel="noopener">新浪微博</a></p>
-<ul>
-<li><p>作者尤雨溪最初在 2013 年 12 月 8号在 GitHub 上发布了 0.6 版</p>
-<ul>
-<li><p>2015 年 10 月份正式发布了 1.0 版本</p>
-<p>Vue 真正的火起来就是在 15 年的 1.0 版发布之后才简陋头角</p>
-</li>
-<li>2016 年 10 月份正式发布了 2.0 版</li>
-<li>截止到 2017-11-9 16:24:15 最新版是 2.5.3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>相关资源<ul>
-<li><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">Github</a></li>
-<li><a href="http://vuejs.org/" target="_blank" rel="noopener">英文官网</a></li>
-<li><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">中文官网</a></li>
-<li><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">官方教程</a></li>
-<li><a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener">API 参考文档</a></li>
-</ul>
-</li>
-</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>表单控件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"#"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">      单行文本框：       <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">name</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      不能编辑的文本框:  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">readonly</span>=<span class="string">"readonly"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      密码框：          <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      隐藏域：          <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">id</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"hidden"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      第一组单选框：<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"red"</span> <span class="attr">name</span>=<span class="string">"color"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"green"</span> <span class="attr">name</span>=<span class="string">"color"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"blue"</span> <span class="attr">name</span>=<span class="string">"color"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      第二组单选框：<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"colo"</span> <span class="attr">value</span>=<span class="string">"yes"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"colo"</span> <span class="attr">value</span>=<span class="string">"no"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      两个复选框：<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"wenlai1010"</span> <span class="attr">name</span>=<span class="string">"web"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"wenlai1010.com"</span> <span class="attr">name</span>=<span class="string">"web"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      文本上传域：   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"file"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      图像域：<span class="tag">&lt;<span class="name">br</span>&gt;</span>  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"../img/"</span> <span class="attr">alt</span>=<span class="string">"嘟嘟嘟"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      按钮：<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">name</span>=<span class="string">"OK"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">name</span>=<span class="string">"NO"</span> <span class="attr">value</span>=<span class="string">"提交"</span> <span class="attr">disabled</span>=<span class="string">"disabled"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">name</span>=<span class="string">"clean"</span> <span class="attr">value</span>=<span class="string">"重置"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"wu"</span> <span class="attr">value</span>=<span class="string">"无动作"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -273,16 +248,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/27/Vue.js-01/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/19/第三章 day06/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/19/第二章 day05/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DataTransfer 对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -297,559 +331,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-完美复活" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/26/完美复活/">之前被我玩坏了，现在完美复活^_^</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/26/完美复活/" class="archive-article-date">
-  	<time datetime="2017-11-25T16:32:42.323Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/26/完美复活/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#表单元素"><span class="toc-number">1.</span> <span class="toc-text">表单元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用input元素"><span class="toc-number">2.</span> <span class="toc-text">使用input元素</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-哪些属性可以使DOM元素隐藏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/哪些属性可以使DOM元素隐藏/">哪些属性可以隐藏DOM元素？</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/哪些属性可以使DOM元素隐藏/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？"><a href="#CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？" class="headerlink" title="CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？"></a>CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</h5><h6 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h6><p>设置display属性为none；</p>
-<h6 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h6><p>设置visibility属性为hidden，不过元素本身还占位置；</p>
-<h6 id="方法三"><a href="#方法三" class="headerlink" title="方法三:"></a>方法三:</h6><p>设置元素宽高为0；</p>
-<h6 id="方法四"><a href="#方法四" class="headerlink" title="方法四:"></a>方法四:</h6><p>设置透明度为0，不过元素本身还占位置；</p>
-<h6 id="方法五"><a href="#方法五" class="headerlink" title="方法五:"></a>方法五:</h6><p>设置z-index为负数，等。。。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/哪些属性可以使DOM元素隐藏/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nodejs更新了" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/nodejs更新了/">Node.js 更新了你还在等什么呢</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/nodejs更新了/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.853Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="../images/nodejs.png" alt="实图"></p>
-<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">点击前往下载地址</a></p>
-<ul>
-<li>尴尬的是下载的人太多，服务器承受不了。</li>
-<li>15.9MB 下载了一个小时还没完。。。</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/nodejs更新了/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-iscroll.js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/iscroll.js/">iscroll.js 用法介绍</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/iscroll.js/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.841Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。"><a href="#iscroll-js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。" class="headerlink" title="iscroll.js主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。"></a><a href="http://iscrolljs.com/" target="_blank" rel="noopener">iscroll.js</a>主要是一款屏幕滚动常用到的框架，其又分为五个小的插件。</h4><h6 id="1-isscroll-js"><a href="#1-isscroll-js" class="headerlink" title="(1)  isscroll.js"></a>(1)  isscroll.js</h6><p>它是通用脚本。包括最常用的功能，并在小占用带宽的同时提供非常高的性能。</p>
-<h6 id="2-iscroll-lite-js"><a href="#2-iscroll-lite-js" class="headerlink" title="(2) iscroll-lite.js"></a>(2) iscroll-lite.js</h6><p>它是主要脚本的精简版本。适合于移动端设备。</p>
-<h6 id="3-iscroll-probe-js"><a href="#3-iscroll-probe-js" class="headerlink" title="(3) iscroll-probe.js"></a>(3) iscroll-probe.js</h6><p>探测当前的滚动位置，正在测试阶段。</p>
-<h6 id="4-iscroll-zoom-js"><a href="#4-iscroll-zoom-js" class="headerlink" title="(4) iscroll-zoom.js"></a>(4) iscroll-zoom.js</h6><p>添加缩放到标准滚动。</p>
-<h6 id="5-iscroll-infinite-js"><a href="#5-iscroll-infinite-js" class="headerlink" title="(5) iscroll-infinite.js"></a>(5) iscroll-infinite.js</h6><p>可以无限次和缓存滚动，处理非常长的元素列表，不适用移动端。</p>
-<h5 id="构建页面和导入iscroll-js"><a href="#构建页面和导入iscroll-js" class="headerlink" title="构建页面和导入iscroll.js:"></a>构建页面和导入iscroll.js:</h5><p>第一步:构建html页面</p>
-<p><code>&lt;div id=&quot;wrapper&quot;&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;...&lt;/ul&gt;&lt;/div&gt;</code></p>
-<p>第二步:启用js脚本</p>
-<p><code>&lt;script type=&quot;text/javascript&quot;&gt;var wrapper = document.getElementById(&#39;wrapper&#39;);var myScroll = new IScroll(wrapper);</code></p>
-<p>第三步:引入js文件</p>
-<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;iscroll.js&quot;&gt;&lt;/script&gt;</code></p>
-<p>第四步:现在我们基本的功能就实现了，如果有什么需要可以查看其API进行修改，api修改代码在第二步的基础上修改</p>
-<p><code>var myScroll = new IScroll(wrapper,{//在这里面写修改的代码});</code></p>
-<p>​                                                                                                                API请自行查找<a href="http://iscrolljs.com/" target="_blank" rel="noopener">scroll.js官网</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/iscroll.js/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-fastclick.js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/fastclick.js/">fastclick.js 介绍及用法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/fastclick.js/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.839Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>注意;截至2015年底，大多数移动浏览器 - 特别是Chrome和Safari - 不再具有300ms触摸延迟，因此fastclick.js对新浏览器没有任何益处，并且会将错误引入到应用程序中。仔细考虑你是否真的需要使用它。</em></p>
-<h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><h6 id="第一步：引入fastclick-js脚本"><a href="#第一步：引入fastclick-js脚本" class="headerlink" title="第一步：引入fastclick.js脚本"></a>第一步：引入fastclick.js脚本</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  src=<span class="string">'./fastclick.js'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h6 id="第二步：初始化脚本"><a href="#第二步：初始化脚本" class="headerlink" title="第二步：初始化脚本"></a>第二步：初始化脚本</h6><p>纯js代码时</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="string">'addEventListener'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</span><br><span class="line">	<span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">	&#125;, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>有jQuery时</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>又或者你正在使用Browserify或其他CommonJS风格的模块系统时：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> attachFastClick = <span class="built_in">require</span>(<span class="string">'fastclick'</span>);</span><br><span class="line">attachFastClick(<span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/ftlabs/fastclick" target="_blank" rel="noopener">点击去fastclick.js源代码地址</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/fastclick.js/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-下载速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/下载速度/">下载提速方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/下载速度/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.838Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦"><a href="#把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦" class="headerlink" title="把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦"></a>把下载地址直接复制下来，粘贴到迅雷下载地址，会自动解析出来下载地址，速度不慢哦</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/下载速度/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-如何垂直居中一个浮动元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/如何垂直居中一个浮动元素/">如何垂直居中一个元素和图片</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/如何垂直居中一个浮动元素/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.810Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="如垂直居中一个元素"><a href="#如垂直居中一个元素" class="headerlink" title="如垂直居中一个元素"></a>如垂直居中一个元素</h5><h6 id="方法一-已知元素的高宽"><a href="#方法一-已知元素的高宽" class="headerlink" title="方法一:已知元素的高宽"></a>方法一:已知元素的高宽</h6><p>$$<br>选择器{<br>    background-color: red;<br>    width:200px;<br>    height:200px;<br>    position: absolute;        //父元素需要相对定位<br>    top: 50%;<br>    left: 50%;<br>    margin-top:-100px ;   //二分之一的height，width<br>    margin-left: -100px;<br>    }<br>$$</p>
-<h6 id="方法二-未知元素的高宽"><a href="#方法二-未知元素的高宽" class="headerlink" title="方法二:未知元素的高宽"></a>方法二:未知元素的高宽</h6><p>$$<br> 选择器{<br>    width: 200px;<br>    height: 200px;<br>    background-color: red;<br>    margin:auto;<br>    position: absolute;        //父元素需要相对定位<br>    left: 0;<br>    top: 0;<br>    right: 0;<br>    bottom: 0;<br>    }<br>$$</p>
-<h5 id="如果是垂直居中一张图片"><a href="#如果是垂直居中一张图片" class="headerlink" title="如果是垂直居中一张图片"></a>如果是垂直居中一张图片</h5><p>$$<br>选择器     //<img>的容器设置如下<br>{<br>    display:table-cell;<br>    text-align:center;<br>    vertical-align:middle;<br>}<br>$$</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/如何垂直居中一个浮动元素/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/25/hello-world/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:01:07.082Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/25/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -872,8 +379,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
