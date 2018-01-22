@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 有限的时间,无限的知识</title>
+  <title>HTML原有的表单及表单控件02 | 有限的时间,无限的知识</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="有限的时间,无限的知识">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="使用label定义标签​    &amp;lt;label.../&amp;gt;元素用于在表单元素中定义标签，可以指定id，style，class等核心属性，也可以指定onclick等事件属性，还可以指定一个for属性，该属性指定该标签与哪个表单控件关联。 ​    当用户单击&amp;lt;label.../&am">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML原有的表单及表单控件02">
+<meta property="og:url" content="http://yoursite.com/2018/01/22/第三章 day07/index.html">
 <meta property="og:site_name" content="有限的时间,无限的知识">
+<meta property="og:description" content="使用label定义标签​    &amp;lt;label.../&amp;gt;元素用于在表单元素中定义标签，可以指定id，style，class等核心属性，也可以指定onclick等事件属性，还可以指定一个for属性，该属性指定该标签与哪个表单控件关联。 ​    当用户单击&amp;lt;label.../&amp;gt;所生产的标签时，浏览器会自动将焦点转移到和标签相关的表单控件元素上 ​    让标签和表单控件关联有两">
+<meta property="og:updated_time" content="2018-01-22T08:04:34.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有限的时间,无限的知识">
+<meta name="twitter:title" content="HTML原有的表单及表单控件02">
+<meta name="twitter:description" content="使用label定义标签​    &amp;lt;label.../&amp;gt;元素用于在表单元素中定义标签，可以指定id，style，class等核心属性，也可以指定onclick等事件属性，还可以指定一个for属性，该属性指定该标签与哪个表单控件关联。 ​    当用户单击&amp;lt;label.../&amp;gt;所生产的标签时，浏览器会自动将焦点转移到和标签相关的表单控件元素上 ​    让标签和表单控件关联有两">
   
     <link rel="alternative" href="/atom.xml" title="有限的时间,无限的知识" type="application/atom+xml">
   
@@ -143,295 +147,224 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-第三章 day07" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      HTML原有的表单及表单控件02
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/22/第三章 day07/" class="archive-article-date">
+
+        
+        <a href="/2018/01/22/第三章 day07/" class="archive-article-date">
   	<time datetime="2018-01-22T08:04:54.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/22/第三章 day07/">HTML原有的表单及表单控件02</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="使用label定义标签"><a href="#使用label定义标签" class="headerlink" title="使用label定义标签"></a>使用label定义标签</h3><p>​    <code>&lt;label.../&gt;</code>元素用于在表单元素中定义标签，可以指定<code>id，style，class等核心属性，也可以指定onclick等事件属性</code>，还可以指定一个for属性，该属性指定该标签与哪个表单控件关联。</p>
+<p>​    当用户单击<code>&lt;label.../&gt;</code>所生产的标签时，浏览器会自动将焦点转移到和标签相关的表单控件元素上</p>
+<p>​    让标签和表单控件关联有两种方式。</p>
+<ul>
+<li>隐式使用for属性: 指定<code>&lt;label.../&gt;</code>元素的for属性值为所关联表单的id属性值</li>
+<li>显示关联: 将普通文本、表单控件一起放在<code>&lt;label.../&gt;</code>元素内部即可</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"#"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  //隐式使用for属性</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">type</span>=<span class="string">"text"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>密码： <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">type</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"OK"</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>尽量使用隐式关联，因为IE没有很好的支持显示关联</strong></p>
+<h3 id="使用button定义按钮"><a href="#使用button定义按钮" class="headerlink" title="使用button定义按钮"></a>使用button定义按钮</h3><p><code>&lt;button.../&gt;</code>元素用于定义一个按钮，在<code>&lt;button.../&gt;</code>元素的内部可以包含普通文本、文本格式化标签、图像等内容，这也是<code>&lt;button.../&gt;按钮和&lt;input.../&gt;按钮的不同</code></p>
+<p><strong><code>&lt;button.../&gt;按钮之间不要放置图像映射，因为它对鼠标和键盘敏感的动作会干扰表单按钮的行为</code></strong></p>
+<p><code>&lt;button.../&gt;</code>元素可以指定id、style、class等核心属性还可以指定onclick等事件响应属性。除此之外，还可以指定如下几个属性：</p>
+<ul>
+<li>disabled: 指定是否禁用此按钮，该属性值只能是disabled，或者省略属性值</li>
+<li>name: 指定该按钮的唯一名称。该属性值应该与id属性值保持一致</li>
+<li>type: 指定该按钮属于那种按钮，该属性只能是button、reset或submit其中之一</li>
+<li>value: 指定该按钮的初始值，该值可通过脚本进行修改</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">  提交</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../img/images.jpg"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="列表框和下拉菜单"><a href="#列表框和下拉菜单" class="headerlink" title="列表框和下拉菜单"></a>列表框和下拉菜单</h3><p><code>&lt;select.../&gt;</code>元素用于创建列表或下拉框，该元素必须和<code>&lt;opation.../&gt;</code>元素结合使用，每个<code>&lt;opation.../&gt;</code>元素代表一个列表项或菜单项。</p>
+<p><code>&lt;select.../&gt;</code>元素可以指定id、style、class等核心属性，该元素仅可以指定onchange事件属性——当该列表或下拉列表内的选中项发生改变时，触发onchange事件。除此之外，还可以指定如下属性：</p>
+<ul>
+<li>disable：设置禁用该列表框和下拉菜单，该属性的 值只能是disable或省略属性值</li>
+<li>multiple：设置该列表框和下拉菜单是否允许多选，该属性只能是multiple，即表示允许多选，一旦设置允许多选，该属性的值就会自动生成列表框</li>
+<li>size：指定该列表框内可同时显示多少个列表项。一旦指定该属性，<code>&lt;select.../&gt;</code>元素就会自动生成类表框</li>
+</ul>
+<p>在<code>&lt;select.../&gt;</code>元素里，只能包含如下两种子元素</p>
+<ul>
+<li><code>&lt;option&gt;</code>: 用于 定义列表框选项或菜单项。该元素里只能包含文本内容作为该选项的文本</li>
+<li><code>&lt;optgroup.../&gt;</code>: 用于定义列表项或菜单项组。该元素只能包含<code>&lt;option.../&gt;</code>子元素，处于<code>&lt;optgroup.../&gt;</code>里的<code>&lt;option.../&gt;</code>就属于该组</li>
+</ul>
+<p><code>&lt;opation.../&gt;</code>元素可以指定id、style、class等核心属性，还可以指定onclick等事件响应属性。除此之外，还可以指定如下几个属性：</p>
+<ul>
+<li>disable：指定禁用该选项，该属性的值只能是disabled</li>
+<li>selected：指定该列表项初始状态是否处于被选中状态。该属性的值只能是selected</li>
+<li>value: 指定该选项对应的请求参数值</li>
+</ul>
+<p><code>&lt;optgroup.../&gt;</code>元素可以指定id、style、class等核心属性，还可以指定onclick等事件响应属性。除此之外，还可以指定如下两个属性：</p>
+<ul>
+<li>label：指定该选项组的标签。这个属性必填</li>
+<li>disabled：设置禁用该选项里的所有选项。该属性只能是disabled或省略属性值</li>
+</ul>
+<p>下面代码是使用<code>&lt;select.../&gt;</code>元素定义了一个下拉菜单和两个列表框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"skills"</span> <span class="attr">id</span>=<span class="string">"skills"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"html5"</span> <span class="attr">selected</span>&gt;</span>HTML5<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"css3"</span>&gt;</span>CSS3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"javascript"</span>&gt;</span>javascript<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"books"</span> <span class="attr">id</span>=<span class="string">"books"</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span> <span class="attr">size</span>=<span class="string">"3"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hyrz"</span> <span class="attr">selected</span>&gt;</span>火影忍者<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hzw"</span>&gt;</span>海贼王<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ss"</span>&gt;</span>死神<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"books"</span> <span class="attr">id</span>=<span class="string">"books"</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span> <span class="attr">size</span>=<span class="string">"6"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"动漫"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hyrz"</span> <span class="attr">selected</span>&gt;</span>火影忍者<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hzw"</span>&gt;</span>海贼王<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ss"</span>&gt;</span>死神<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"游戏"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hyrz"</span> <span class="attr">selected</span>&gt;</span>王者荣耀<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hzw"</span>&gt;</span>穿越火线<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ss"</span>&gt;</span>阴阳师<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用textarea定义文本域"><a href="#使用textarea定义文本域" class="headerlink" title="使用textarea定义文本域"></a>使用textarea定义文本域</h3><p><code>&lt;textarea.../&gt;</code>素用于生成多行文本域，<code>&lt;textarea.../&gt;</code>元素可以指定id、styel、class等核心属性，还可以指定onclick等事件属性。由于textarea的特殊性，它可以接收用户输入，用户可以选中文本域内的文本，所以还可以指定onselect、onchange两个属性，分别用于响应文本被选中、文本被修改事件。除此之外，该元素也可以指定如下几个属性。</p>
+<ul>
+<li>cols: 指定文本域的宽度，该属性必须</li>
+<li>rows：指定文本域的高度，该属性必填</li>
+<li>disabled：指定禁用该文本域。该属性只能是disabled，当此文本域首次加载时禁用此文本域</li>
+<li>readonly：指定该文本域只读，该属性值只能是readonly</li>
+</ul>
+<p>与单行文本框相同的是，<code>&lt;texarea.../&gt;</code>元素也指定name属性，该属性将作为textarea对应请求参数的参数名；与单行文本框不同的是，<code>&lt;textarea.../&gt;</code>元素不能指定value属性，<code>&lt;textarea&gt;和&lt;/textarea&gt;</code>标签之间的内容将作为<code>&lt;textarea.../&gt;</code>对应请求参数的参数值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">"20"</span> <span class="attr">rows</span>=<span class="string">"2"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">"20"</span> <span class="attr">rows</span>=<span class="string">"2"</span> <span class="attr">readonly</span>=<span class="string">"readonly"</span>&gt;</span></span><br><span class="line">        火影忍者</span><br><span class="line">        王者荣耀</span><br><span class="line"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/22/第三章 day07/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/19/第三章 day06/" class="archive-article-date">
-  	<time datetime="2018-01-19T13:57:03.748Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/19/第三章 day06/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML原有的表单及表单控件</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/19/第三章 day06/">HTML原有的表单及表单控件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用label定义标签"><span class="toc-number">1.</span> <span class="toc-text">使用label定义标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用button定义按钮"><span class="toc-number">2.</span> <span class="toc-text">使用button定义按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表框和下拉菜单"><span class="toc-number">3.</span> <span class="toc-text">列表框和下拉菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用textarea定义文本域"><span class="toc-number">4.</span> <span class="toc-text">使用textarea定义文本域</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/19/第二章 day05/" class="archive-article-date">
-  	<time datetime="2018-01-19T05:56:26.355Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/19/第二章 day05/">DataTransfer 对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/14/第二章 day04/" class="archive-article-date">
-  	<time datetime="2018-01-14T11:23:16.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/14/第二章 day04/">《疯狂HTML CSS3 JavaScript讲义》 读书笔记 第二章 HTML5的拖放API day04</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/13/第二章 day03/" class="archive-article-date">
-  	<time datetime="2018-01-13T08:18:49.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/13/第二章 day03/">《疯狂HTML CSS3 JavaScript讲义》 读书笔记 第二章 HTML5的常用元素与属性 day03</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/12/第二章 day02/" class="archive-article-date">
-  	<time datetime="2018-01-12T04:13:17.189Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/12/第二章 day02/">《疯狂HTML CSS3 JavaScript讲义》 读书笔记 第二章 HTML5的常用元素与属性 day02</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/11/第一章 01day/" class="archive-article-date">
-  	<time datetime="2018-01-11T04:52:30.515Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/11/第一章 01day/">《疯狂HTML CSS3 JavaScript讲义》 读书笔记 第一章 HTML5简介 day01</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/10/H5&&C3/" class="archive-article-date">
-  	<time datetime="2018-01-10T03:00:04.538Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/H5&&C3/">H5&amp;&amp;C3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/09/form表单/" class="archive-article-date">
-  	<time datetime="2018-01-09T03:42:19.101Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/09/form表单/">form 表单</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/08/http/" class="archive-article-date">
-  	<time datetime="2018-01-08T03:17:55.712Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/08/http/">http</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -455,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

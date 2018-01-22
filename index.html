@@ -145,6 +145,120 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第三章 day07" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/第三章 day07/">HTML原有的表单及表单控件02</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/22/第三章 day07/" class="archive-article-date">
+  	<time datetime="2018-01-22T08:04:54.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="使用label定义标签"><a href="#使用label定义标签" class="headerlink" title="使用label定义标签"></a>使用label定义标签</h3><p>​    <code>&lt;label.../&gt;</code>元素用于在表单元素中定义标签，可以指定<code>id，style，class等核心属性，也可以指定onclick等事件属性</code>，还可以指定一个for属性，该属性指定该标签与哪个表单控件关联。</p>
+<p>​    当用户单击<code>&lt;label.../&gt;</code>所生产的标签时，浏览器会自动将焦点转移到和标签相关的表单控件元素上</p>
+<p>​    让标签和表单控件关联有两种方式。</p>
+<ul>
+<li>隐式使用for属性: 指定<code>&lt;label.../&gt;</code>元素的for属性值为所关联表单的id属性值</li>
+<li>显示关联: 将普通文本、表单控件一起放在<code>&lt;label.../&gt;</code>元素内部即可</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"#"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  //隐式使用for属性</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">type</span>=<span class="string">"text"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>密码： <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">type</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"OK"</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>尽量使用隐式关联，因为IE没有很好的支持显示关联</strong></p>
+<h3 id="使用button定义按钮"><a href="#使用button定义按钮" class="headerlink" title="使用button定义按钮"></a>使用button定义按钮</h3><p><code>&lt;button.../&gt;</code>元素用于定义一个按钮，在<code>&lt;button.../&gt;</code>元素的内部可以包含普通文本、文本格式化标签、图像等内容，这也是<code>&lt;button.../&gt;按钮和&lt;input.../&gt;按钮的不同</code></p>
+<p><strong><code>&lt;button.../&gt;按钮之间不要放置图像映射，因为它对鼠标和键盘敏感的动作会干扰表单按钮的行为</code></strong></p>
+<p><code>&lt;button.../&gt;</code>元素可以指定id、style、class等核心属性还可以指定onclick等事件响应属性。除此之外，还可以指定如下几个属性：</p>
+<ul>
+<li>disabled: 指定是否禁用此按钮，该属性值只能是disabled，或者省略属性值</li>
+<li>name: 指定该按钮的唯一名称。该属性值应该与id属性值保持一致</li>
+<li>type: 指定该按钮属于那种按钮，该属性只能是button、reset或submit其中之一</li>
+<li>value: 指定该按钮的初始值，该值可通过脚本进行修改</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">  提交</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../img/images.jpg"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="列表框和下拉菜单"><a href="#列表框和下拉菜单" class="headerlink" title="列表框和下拉菜单"></a>列表框和下拉菜单</h3><p><code>&lt;select.../&gt;</code>元素用于创建列表或下拉框，该元素必须和<code>&lt;opation.../&gt;</code>元素结合使用，每个<code>&lt;opation.../&gt;</code>元素代表一个列表项或菜单项。</p>
+<p><code>&lt;select.../&gt;</code>元素可以指定id、style、class等核心属性，该元素仅可以指定onchange事件属性——当该列表或下拉列表内的选中项发生改变时，触发onchange事件。除此之外，还可以指定如下属性：</p>
+<ul>
+<li>disable：设置禁用该列表框和下拉菜单，该属性的 值只能是disable或省略属性值</li>
+<li>multiple：设置该列表框和下拉菜单是否允许多选，该属性只能是multiple，即表示允许多选，一旦设置允许多选，该属性的值就会自动生成列表框</li>
+<li>size：指定该列表框内可同时显示多少个列表项。一旦指定该属性，<code>&lt;select.../&gt;</code>元素就会自动生成类表框</li>
+</ul>
+<p>在<code>&lt;select.../&gt;</code>元素里，只能包含如下两种子元素</p>
+<ul>
+<li><code>&lt;option&gt;</code>: 用于 定义列表框选项或菜单项。该元素里只能包含文本内容作为该选项的文本</li>
+<li><code>&lt;optgroup.../&gt;</code>: 用于定义列表项或菜单项组。该元素只能包含<code>&lt;option.../&gt;</code>子元素，处于<code>&lt;optgroup.../&gt;</code>里的<code>&lt;option.../&gt;</code>就属于该组</li>
+</ul>
+<p><code>&lt;opation.../&gt;</code>元素可以指定id、style、class等核心属性，还可以指定onclick等事件响应属性。除此之外，还可以指定如下几个属性：</p>
+<ul>
+<li>disable：指定禁用该选项，该属性的值只能是disabled</li>
+<li>selected：指定该列表项初始状态是否处于被选中状态。该属性的值只能是selected</li>
+<li>value: 指定该选项对应的请求参数值</li>
+</ul>
+<p><code>&lt;optgroup.../&gt;</code>元素可以指定id、style、class等核心属性，还可以指定onclick等事件响应属性。除此之外，还可以指定如下两个属性：</p>
+<ul>
+<li>label：指定该选项组的标签。这个属性必填</li>
+<li>disabled：设置禁用该选项里的所有选项。该属性只能是disabled或省略属性值</li>
+</ul>
+<p>下面代码是使用<code>&lt;select.../&gt;</code>元素定义了一个下拉菜单和两个列表框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"skills"</span> <span class="attr">id</span>=<span class="string">"skills"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"html5"</span> <span class="attr">selected</span>&gt;</span>HTML5<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"css3"</span>&gt;</span>CSS3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"javascript"</span>&gt;</span>javascript<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"books"</span> <span class="attr">id</span>=<span class="string">"books"</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span> <span class="attr">size</span>=<span class="string">"3"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hyrz"</span> <span class="attr">selected</span>&gt;</span>火影忍者<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hzw"</span>&gt;</span>海贼王<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ss"</span>&gt;</span>死神<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"books"</span> <span class="attr">id</span>=<span class="string">"books"</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span> <span class="attr">size</span>=<span class="string">"6"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"动漫"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hyrz"</span> <span class="attr">selected</span>&gt;</span>火影忍者<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hzw"</span>&gt;</span>海贼王<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ss"</span>&gt;</span>死神<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"游戏"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hyrz"</span> <span class="attr">selected</span>&gt;</span>王者荣耀<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hzw"</span>&gt;</span>穿越火线<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ss"</span>&gt;</span>阴阳师<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用textarea定义文本域"><a href="#使用textarea定义文本域" class="headerlink" title="使用textarea定义文本域"></a>使用textarea定义文本域</h3><p><code>&lt;textarea.../&gt;</code>素用于生成多行文本域，<code>&lt;textarea.../&gt;</code>元素可以指定id、styel、class等核心属性，还可以指定onclick等事件属性。由于textarea的特殊性，它可以接收用户输入，用户可以选中文本域内的文本，所以还可以指定onselect、onchange两个属性，分别用于响应文本被选中、文本被修改事件。除此之外，该元素也可以指定如下几个属性。</p>
+<ul>
+<li>cols: 指定文本域的宽度，该属性必须</li>
+<li>rows：指定文本域的高度，该属性必填</li>
+<li>disabled：指定禁用该文本域。该属性只能是disabled，当此文本域首次加载时禁用此文本域</li>
+<li>readonly：指定该文本域只读，该属性值只能是readonly</li>
+</ul>
+<p>与单行文本框相同的是，<code>&lt;texarea.../&gt;</code>元素也指定name属性，该属性将作为textarea对应请求参数的参数名；与单行文本框不同的是，<code>&lt;textarea.../&gt;</code>元素不能指定value属性，<code>&lt;textarea&gt;和&lt;/textarea&gt;</code>标签之间的内容将作为<code>&lt;textarea.../&gt;</code>对应请求参数的参数值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">"20"</span> <span class="attr">rows</span>=<span class="string">"2"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">"20"</span> <span class="attr">rows</span>=<span class="string">"2"</span> <span class="attr">readonly</span>=<span class="string">"readonly"</span>&gt;</span></span><br><span class="line">        火影忍者</span><br><span class="line">        王者荣耀</span><br><span class="line"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/22/第三章 day07/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第三章 day06" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1406,142 +1520,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/08/http/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue.js-02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/Vue.js-02/">Vue.js 02</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/29/Vue.js-02/" class="archive-article-date">
-  	<time datetime="2017-11-29T11:58:28.271Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
-<li>Vue 基础<ul>
-<li>转变 DOM 操作思想</li>
-<li>MVVM<ul>
-<li>Model</li>
-<li>View</li>
-<li>ViewModel</li>
-<li>哲学：数据驱动视图</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>不难、最简单的、掌握工具的使用方法就可以了</li>
-<li>Vue 框架<ul>
-<li>Vue Router</li>
-<li>Vuex</li>
-<li>webpack<ul>
-<li>可以像写 node 一样写浏览器中的 JavaScript</li>
-</ul>
-</li>
-<li>Vue CLI</li>
-<li>Vue 全家桶</li>
-<li>一整套的集成解决方案</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>EcmaScript 6</li>
-</ul>
-<ul>
-<li>Vue 基本语法复习</li>
-<li>EcmaScript 6<ul>
-<li>let<ul>
-<li>定义变量，核心就是增加了块级作用域</li>
-</ul>
-</li>
-<li>const<ul>
-<li>也是块级作用域，它的作用是定义常量，一旦定义不可改变</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>let 和 const</li>
-<li>模板字符串的使用</li>
-<li>解构赋值<ul>
-<li>数组的解构赋值</li>
-<li>对象</li>
-<li>函数参数也支持解构赋值</li>
-</ul>
-</li>
-<li>函数的扩展<ul>
-<li>参数默认值，只有尾参数才可以省略<ul>
-<li>如果一个函数有多个参数，而只有其中一个有默认值可以省略，则把这个参数定义成尾参数</li>
-</ul>
-</li>
-<li>函数参数的 rest 参数<ul>
-<li>获取剩余参数</li>
-<li>代替了 arguments</li>
-<li>而且默认是真正的数组</li>
-</ul>
-</li>
-<li>箭头函数<ul>
-<li>语法</li>
-<li>this 指向问题</li>
-<li>不能乱用，要分请求它内部的 this</li>
-<li>因为箭头函数中默认自动 <code>bind(this)</code></li>
-<li>所以箭头函数是无法通过手动 call、apply、bind 来修改其内部 this 指向的</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/29/Vue.js-02/">展开全文 >></a>
         </p>
       
 
