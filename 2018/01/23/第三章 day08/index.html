@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 有限的时间,无限的知识</title>
+  <title>HTML5新增的属性与元素 | 有限的时间,无限的知识</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="有限的时间,无限的知识">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="HTML5为表单控件新增的属性1.form属性在HTML5以前，所有的表单控件都必须放在&amp;lt;form.../&amp;gt;元内部，表明该表单控件属于该表单；但HTML5为表单新增了form属性，用于定义该表单控件所属的表单，该属性的值应该是它所属表单的id，如下： 12345&amp;lt;form id">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5新增的属性与元素">
+<meta property="og:url" content="http://yoursite.com/2018/01/23/第三章 day08/index.html">
 <meta property="og:site_name" content="有限的时间,无限的知识">
+<meta property="og:description" content="HTML5为表单控件新增的属性1.form属性在HTML5以前，所有的表单控件都必须放在&amp;lt;form.../&amp;gt;元内部，表明该表单控件属于该表单；但HTML5为表单新增了form属性，用于定义该表单控件所属的表单，该属性的值应该是它所属表单的id，如下： 12345&amp;lt;form id=&quot;addForm&quot; action=&quot;add&quot;&amp;gt;  昵称：&amp;lt;input type=&quot;text">
+<meta property="og:updated_time" content="2018-01-23T04:44:23.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有限的时间,无限的知识">
+<meta name="twitter:title" content="HTML5新增的属性与元素">
+<meta name="twitter:description" content="HTML5为表单控件新增的属性1.form属性在HTML5以前，所有的表单控件都必须放在&amp;lt;form.../&amp;gt;元内部，表明该表单控件属于该表单；但HTML5为表单新增了form属性，用于定义该表单控件所属的表单，该属性的值应该是它所属表单的id，如下： 12345&amp;lt;form id=&quot;addForm&quot; action=&quot;add&quot;&amp;gt;  昵称：&amp;lt;input type=&quot;text">
   
     <link rel="alternative" href="/atom.xml" title="有限的时间,无限的知识" type="application/atom+xml">
   
@@ -143,305 +147,198 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-第三章 day08" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML5新增的属性与元素
+    </h1>
+  
+
+        
+        <a href="/2018/01/23/第三章 day08/" class="archive-article-date">
+  	<time datetime="2018-01-23T04:47:33.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-23</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTML5为表单控件新增的属性"><a href="#HTML5为表单控件新增的属性" class="headerlink" title="HTML5为表单控件新增的属性"></a>HTML5为表单控件新增的属性</h3><h4 id="1-form属性"><a href="#1-form属性" class="headerlink" title="1.form属性"></a>1.form属性</h4><p>在HTML5以前，所有的表单控件都必须放在<code>&lt;form.../&gt;</code>元内部，表明该表单控件属于该表单；但HTML5为表单新增了form属性，用于定义该表单控件所属的表单，该属性的值应该是它所属表单的id，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"addForm"</span> <span class="attr">action</span>=<span class="string">"add"</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></span><br><span class="line">  密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"desc"</span> <span class="attr">form</span>=<span class="string">"addForm"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-formaction属性"><a href="#2-formaction属性" class="headerlink" title="2.formaction属性"></a>2.formaction属性</h4><p>这是一个十分实用的属性，相信大部分开发者以前都会遇到一个场景：页面中有一个表单，该表单包含了两个以上的提交按钮，但程序需要不同的按钮提交到不同的action。</p>
+<p>HTML5的formaction属性专门用于处理上面场景：对于<code>&lt;input type=&quot;submit&quot;.../&gt;、&lt;input type=&quot;image&quot;.../&gt;等元素，</code>都可以指定formaction，该属性即可动态地让表单提交到不同的url。例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></span><br><span class="line">  密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"注册"</span> <span class="attr">formaction</span>=<span class="string">"regist"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span> <span class="attr">formaction</span>=<span class="string">"login"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-formxxx属性"><a href="#3-formxxx属性" class="headerlink" title="3.formxxx属性"></a>3.formxxx属性</h4><p>formxxx属性是一些与formaction极为相似的 属性，对于<code>&lt;input type=&quot;submit&quot;.../&gt;、&lt;input type=&quot;image&quot;.../&gt;等元素，</code>都可以指定formenctype、formmethod、formtarget等属性，其中：</p>
+<ul>
+<li>formenctype：通过该属性可以让按钮动地改变表单的enctype属性</li>
+<li>formmethod：通过该属性可以让按钮动地设置表单以POST或GET方式提交</li>
+<li>formarget：通过该属性可以让按钮动地改变表单的target属性</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span></span><br><span class="line">  密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"GET提交"</span> <span class="attr">formmethod</span>=<span class="string">"get"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"POST提交"</span> <span class="attr">formmethod</span>=<span class="string">"post"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-autofocus属性"><a href="#4-autofocus属性" class="headerlink" title="4.autofocus属性"></a>4.autofocus属性</h4><p>当为某个表单控件增加该属性后，浏览器打开该页面时该组件就会自动获得焦点</p>
+<p><strong>由于打开页面时只能有一个控件获得焦点，因此整个页面上最多只能有一个表单控件可以设置该属性</strong></p>
+<h4 id="5-placeholder属性"><a href="#5-placeholder属性" class="headerlink" title="5.placeholder属性"></a>5.placeholder属性</h4><p>在一些用户界面足够人性化的页面里，当用户还未在单行文本框、多行文本域中输入内容时，单行文本框、多行文本域内就会显示了对用户的提示信息。一旦用户开始输入，单行文本框、多行文本域内的提示信息就会自动消失。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">placeholder</span>=<span class="string">"请输入昵称"</span> /&gt;</span></span><br><span class="line">  密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"请输入密码"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"注册"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-list属性"><a href="#6-list属性" class="headerlink" title="6.list属性"></a>6.list属性</h4><p>在HTML5规范以前，HTML表单控件没有类似于combobox的组件。HTML5的list属性弥补了这个不足，list属性的值应该是一个<code>&lt;datalist.../&gt;</code>组件的id。也就是说，list属性必须与<code>&lt;datalist.../&gt;</code>元素结合使用</p>
+<ul>
+<li><code>&lt;datalist.../&gt;</code>: 该元素相当于一个“看不见”的<code>&lt;select.../&gt;</code>元素，用于生成一个隐藏的下拉菜单。<code>&lt;datalist.../&gt;</code>所包含的子元素与<code>&lt;select.../&gt;</code>元素完全相同</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"addForm"</span> <span class="attr">action</span>=<span class="string">"add"</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">list</span>=<span class="string">"books"</span>/&gt;</span></span><br><span class="line">  密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"books"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"html5"</span>&gt;</span>HTML5<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"css3"</span>&gt;</span>CSS3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"javascript2017"</span>&gt;</span>javascript2017<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-autocomplete属性"><a href="#7-autocomplete属性" class="headerlink" title="7.autocomplete属性"></a>7.autocomplete属性</h4><p>该属性主要与list属性结合使用，当文本框指定了有效的list属性后，该文本框下面总会显示一个下拉菜单供用户选择。但在有些时候可能出于安全考虑，开发者不想让某些用户看到这个下拉菜单，则可以通过autocomplete属性来实现。该属性支持如下两个值：</p>
+<ul>
+<li>on：打开autocomplete，文本框下方会显示下拉菜单</li>
+<li>off：关闭autocomplete，文本框下方不会显示下拉菜单</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/08/http/" class="archive-article-date">
-  	<time datetime="2018-01-08T03:17:55.712Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/08/http/">http</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/Vue.js-02/" class="archive-article-date">
-  	<time datetime="2017-11-29T11:58:28.271Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/Vue.js-02/">Vue.js 02</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/23/第三章 day08/" alt="微信分享二维码">
+    </div>
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/27/Vue.js-01/" class="archive-article-date">
-  	<time datetime="2017-11-27T09:04:31.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/22/第三章 day07/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML原有的表单及表单控件02</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/27/Vue.js-01/">Vue.js 01</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5为表单控件新增的属性"><span class="toc-number">1.</span> <span class="toc-text">HTML5为表单控件新增的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-form属性"><span class="toc-number">1.1.</span> <span class="toc-text">1.form属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-formaction属性"><span class="toc-number">1.2.</span> <span class="toc-text">2.formaction属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-formxxx属性"><span class="toc-number">1.3.</span> <span class="toc-text">3.formxxx属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-autofocus属性"><span class="toc-number">1.4.</span> <span class="toc-text">4.autofocus属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-placeholder属性"><span class="toc-number">1.5.</span> <span class="toc-text">5.placeholder属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-list属性"><span class="toc-number">1.6.</span> <span class="toc-text">6.list属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-autocomplete属性"><span class="toc-number">1.7.</span> <span class="toc-text">7.autocomplete属性</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/26/完美复活/" class="archive-article-date">
-  	<time datetime="2017-11-25T16:32:42.323Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/26/完美复活/">之前被我玩坏了，现在完美复活^_^</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/哪些属性可以使DOM元素隐藏/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/哪些属性可以使DOM元素隐藏/">哪些属性可以隐藏DOM元素？</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/nodejs更新了/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.853Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/nodejs更新了/">Node.js 更新了你还在等什么呢</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/iscroll.js/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.841Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/iscroll.js/">iscroll.js 用法介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/fastclick.js/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.839Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/fastclick.js/">fastclick.js 介绍及用法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/下载速度/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.838Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/下载速度/">下载提速方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/如何垂直居中一个浮动元素/" class="archive-article-date">
-  	<time datetime="2017-11-25T15:30:16.810Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/如何垂直居中一个浮动元素/">如何垂直居中一个元素和图片</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -465,8 +362,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
