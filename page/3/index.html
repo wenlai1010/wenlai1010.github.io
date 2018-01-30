@@ -145,6 +145,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-fastclick.js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/25/fastclick.js/">fastclick.js 介绍及用法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/25/fastclick.js/" class="archive-article-date">
+  	<time datetime="2017-11-25T15:30:16.839Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>注意;截至2015年底，大多数移动浏览器 - 特别是Chrome和Safari - 不再具有300ms触摸延迟，因此fastclick.js对新浏览器没有任何益处，并且会将错误引入到应用程序中。仔细考虑你是否真的需要使用它。</em></p>
+<h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><h6 id="第一步：引入fastclick-js脚本"><a href="#第一步：引入fastclick-js脚本" class="headerlink" title="第一步：引入fastclick.js脚本"></a>第一步：引入fastclick.js脚本</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  src=<span class="string">'./fastclick.js'</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="第二步：初始化脚本"><a href="#第二步：初始化脚本" class="headerlink" title="第二步：初始化脚本"></a>第二步：初始化脚本</h6><p>纯js代码时</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="string">'addEventListener'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</span><br><span class="line">	<span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">	&#125;, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有jQuery时</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>又或者你正在使用Browserify或其他CommonJS风格的模块系统时：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> attachFastClick = <span class="built_in">require</span>(<span class="string">'fastclick'</span>);</span><br><span class="line">attachFastClick(<span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/ftlabs/fastclick" target="_blank" rel="noopener">点击去fastclick.js源代码地址</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/25/fastclick.js/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-下载速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

@@ -145,6 +145,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第三章 day11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/30/第三章 day11/">HTML5新增的客户端效验</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/30/第三章 day11/" class="archive-article-date">
+  	<time datetime="2018-01-30T08:23:35.844Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>在HTML5规范以前，客户端效验只能通过JavaScript来完成，HTML5改变了这种现状，HTML5为表单控件额外增加了一些输入效验属性。HTML5页面只要简单地设置这些效验属性即可完成客户端效验</em></p>
+<h3 id="使用效验属性执行效验"><a href="#使用效验属性执行效验" class="headerlink" title="使用效验属性执行效验"></a>使用效验属性执行效验</h3><p>HTML5为表单控件新增了如下几个效验属性。</p>
+<ul>
+<li>required：该属性指定该表单控件必须填写。该属性的值必须是required或完全省略属性值</li>
+<li>pattern：该属性指定该表单控件的值必须符合指定的正则表达式。该属性的值必须是一个合法的正则表达式</li>
+<li>min、max、step：这3个属性只对数值类型、日期类型的<code>&lt;input.../&gt;</code>元素有效，这3个属性控制该表单控件的值必须在min~max之间，并符合step步长</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>使用效验属性执行效验<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"add"</span>&gt;</span></span><br><span class="line">    图书名：  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">required</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    图书ISBN：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"isbn"</span> <span class="attr">required</span> <span class="attr">pattern</span>=<span class="string">"d&#123;3&#125;-\d-d&#123;3&#125;-d&#123;5&#125;"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    图书价格：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">name</span>=<span class="string">"price"</span> <span class="attr">min</span>=<span class="string">"20"</span> <span class="attr">max</span>=<span class="string">"150"</span> <span class="attr">step</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="调用checkValidity方法进行效验"><a href="#调用checkValidity方法进行效验" class="headerlink" title="调用checkValidity方法进行效验"></a>调用checkValidity方法进行效验</h3><ul>
+<li>如果表单对象调用checkVaildity()方法返回true，则表明该表单内的所有表单控件都有效。只要任意一个表单控件不能通过输入效验，表单对象的checkVaildity()方法就会返回false。</li>
+<li>如果表单对象调用checkVaildity()方法返回true，则表明该表单控件可以通过输入效验；否则返回false。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"add1"</span>&gt;</span></span><br><span class="line">    生日：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span> <span class="attr">name</span>=<span class="string">"birth"</span> <span class="attr">id</span>=<span class="string">"birth"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    邮件地址： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span> <span class="attr">onclick</span>=<span class="string">"return check();"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> check = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> commonCheck(<span class="string">"birth"</span>,<span class="string">"生日"</span>,<span class="string">"字段必须是有效的日期！"</span>)</span></span><br><span class="line"><span class="javascript">        &amp;&amp; commonCheck(<span class="string">"email"</span>,<span class="string">"邮件地址"</span>,<span class="string">"字段必须符合电子邮件的格式！"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> commonCheck = <span class="function"><span class="keyword">function</span>(<span class="params">field , fieldName , tip</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> targetEle = <span class="built_in">document</span>.getElementById(field);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">if</span> (targetEle.value.trim() == <span class="string">""</span>) &#123;</span></span><br><span class="line"><span class="javascript">        alert(fieldName + <span class="string">"字段必须填写！"</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!targetEle.checkValidity())&#123;</span></span><br><span class="line"><span class="undefined">        alert(fieldName + tip);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="literal">true</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="自定义错误提示"><a href="#自定义错误提示" class="headerlink" title="自定义错误提示"></a>自定义错误提示</h3><p>有些情况下，我们希望定制自己的错误信息，HTML5为表单控件新增的setCustromValidity()方法来实现，该方法接受一个字符串参数，该字符串将会作为用户“自定义”的错误提示。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>使用效验属性执行效验<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"add"</span>&gt;</span></span><br><span class="line">    图书名：  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">required</span> <span class="attr">name</span>=<span class="string">"name"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    图书ISBN：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"isbn"</span> <span class="attr">required</span> <span class="attr">pattern</span>=<span class="string">"d&#123;3&#125;-\d-d&#123;3&#125;-d&#123;5&#125;"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    图书价格：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">name</span>=<span class="string">"price"</span> <span class="attr">min</span>=<span class="string">"20"</span> <span class="attr">max</span>=<span class="string">"150"</span> <span class="attr">step</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> check = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">     <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementById(<span class="string">"name"</span>).checkValidity())&#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"name"</span>).setCustomValidity(<span class="string">"图书名是必须的填的！"</span>);</span></span><br><span class="line"><span class="undefined">     &#125; </span></span><br><span class="line"><span class="javascript">     <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementById(<span class="string">"isbn"</span>).checkValidity())&#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"isbn"</span>).setCustomValidity(<span class="string">"图书ISBN是必须的填的！"</span>);</span></span><br><span class="line"><span class="undefined">     &#125; </span></span><br><span class="line"><span class="javascript">     <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementById(<span class="string">"price"</span>).checkValidity())&#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"price"</span>).setCustomValidity(<span class="string">"图书价格是必须的填的！"</span>);</span></span><br><span class="line"><span class="undefined">     &#125;</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="关闭效验"><a href="#关闭效验" class="headerlink" title="关闭效验"></a>关闭效验</h3><p>在某些时候，如果希望暂时关闭HTML5对表单提供的输入效验，则可以通过如下两种方式来实现</p>
+<ul>
+<li><code>&lt;form.../&gt;</code>元素增加novalidate属性，该属性的值要么是novalidate，要么省略属性值</li>
+<li>为type=“submit”的<code>&lt;input.../&gt;</code>或<code>&lt;button.../&gt;</code>元素设置formnovalidate属性，该属性的值要么是novalidate，要么省略属性值</li>
+</ul>
+<p>第一种方式将会直接关闭表单的输入效验功能，无论通过哪个按钮提交表单，该表单都不会执行输入效验；第二种方式则由指定的提交按钮来 关闭表单的 输入效验，只有当用户通过指定了formnovalidate属性的按钮提交表单时才会关闭 表单的输入效验</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/30/第三章 day11/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第三章 day10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1092,165 +1175,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/12/第二章 day02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第一章 01day" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/11/第一章 01day/">《疯狂HTML CSS3 JavaScript讲义》 读书笔记 第一章 HTML5简介 day01</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/11/第一章 01day/" class="archive-article-date">
-  	<time datetime="2018-01-11T04:52:30.515Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>本书PDF版下载地址<a href="https://pan.baidu.com/s/1hugW03E" target="_blank" rel="noopener">《疯狂HTML CSS3 JavaScript讲义》</a> 由于是读书笔记，我只会记录我认为有用的知识，如果你想了解更多，请自己阅读。</strong></p>
-<h2 id="HTML5的优势"><a href="#HTML5的优势" class="headerlink" title="HTML5的优势"></a>HTML5的优势</h2><h3 id="1-解决跨浏览器的问题"><a href="#1-解决跨浏览器的问题" class="headerlink" title="1.解决跨浏览器的问题"></a>1.解决跨浏览器的问题</h3><ul>
-<li>IE: 在IE 9 之后更好的兼容了HTML5</li>
-<li>Chrome: Googele 一直都支持HTML5</li>
-<li>Firefox: 从firefox 4开始就支持HTML5</li>
-<li>Opera:  从Opera 10 开始支持HTML5</li>
-<li>Safari:   从Safari 5 开始支持HTML5</li>
-</ul>
-<h3 id="2-部分代替了JavaScript"><a href="#2-部分代替了JavaScript" class="headerlink" title="2.部分代替了JavaScript"></a>2.部分代替了JavaScript</h3><p>​    例如，打开一个页面后立即让某个单行文本框获得输入焦点，在HTML5之前，需要JavaScript来实现如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>dayo1<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">  邮箱：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">"name"</span>).focus();</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上面的页面使用HTML5 只需要加一个属性，如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>dayo1<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  昵称：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">autofocus</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">  邮箱：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-更明确的语义支持"><a href="#3-更明确的语义支持" class="headerlink" title="3.更明确的语义支持"></a>3.更明确的语义支持</h3><p>​    HTML5之前，表达一个文档结构，如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"nav"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"article"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aside"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"footer"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>​    HTML5表达一个文档结构，如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>...<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span>...<span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>...<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>...<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>...<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-增强了web应用程序的功能"><a href="#4-增强了web应用程序的功能" class="headerlink" title="4.增强了web应用程序的功能"></a>4.增强了web应用程序的功能</h3><p>​    一直以来，HTML页面的功能被死死的限制：客户端从服务器下载HTML页面数据，浏览器负责呈现这些HTML页面数据。出于对客户机的安全性考虑，以前的HTML在安全性方面做得足够安全。</p>
-<p>​    当页面做得太安全之后，我们需要通过JavaScript等其他方式来增加HTML功能，</p>
-<p>为了弥补这种不足，HTML5规范增加了不少新的API。</p>
-<h2 id="HTML5的基本结构和语法变化"><a href="#HTML5的基本结构和语法变化" class="headerlink" title="HTML5的基本结构和语法变化"></a>HTML5的基本结构和语法变化</h2><h3 id="1-HTML5基本结构"><a href="#1-HTML5基本结构" class="headerlink" title="1.HTML5基本结构"></a>1.HTML5基本结构</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>不要在<code>&lt;html&gt;</code>和<code>&lt;head&gt;</code>之间插入任何内容</strong></p>
-<h3 id="2-HTML的语法变化"><a href="#2-HTML的语法变化" class="headerlink" title="2.HTML的语法变化"></a>2.HTML的语法变化</h3><p>1.标签不再区分大小写，例如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">P</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">BODY</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上面的代码完全符合HTML5规范</p>
-<p>2.元素可以省略结束标签，具体来说，HTML5可分为以下3种：</p>
-<ul>
-<li><p>空元素语法的元素：<code>area、base、br、col、command、embed、hr、img、input、keygen、link、mata、param、source、wbr</code>。</p>
-<p>这些空元素标签不允许将开始标签和结束标签分开定义。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">" "</span>&gt;</span><span class="tag">&lt;/<span class="name">img</span>&gt;</span>  //错误写法</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">" "</span> /&gt;</span>		 //正确写法</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">" "</span> &gt;</span> 		 //正确写法 HTML5可以省略最后一个斜杠</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以省略结束标签的元素：<code>colgroup、dt、dd、li、optgroup、option、p、rt、rp、thead、tbody、tfoot、tr、td、th</code>。</p>
-</li>
-<li><p>可以省略全部标签的元素：<code>html、head、body、tbody</code>。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>dayo1<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上面页面中完全没有<code>&lt;html.../&gt;、&lt;head.../&gt;、&lt;body.../&gt;</code>这3个元素，但这个页面是符合HTML5规范的。</p>
-</li>
-</ul>
-<p>3.允许省略属性值的属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">checked</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">readonly</span> <span class="attr">type</span>=<span class="string">"text"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">selected</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>​    HTML5中允许省略属性值得属性</p>
-<table>
-<thead>
-<tr>
-<th>HTML5</th>
-<th>XHTML</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>checked    //默认选中</td>
-<td>checked=”checked”</td>
-</tr>
-<tr>
-<td>readonly   //只读</td>
-<td>readonly=”readonly”</td>
-</tr>
-<tr>
-<td>disabled   //禁用</td>
-<td>disabled=”disabled”</td>
-</tr>
-<tr>
-<td>selected   //默认选中</td>
-<td>selected=”selected”</td>
-</tr>
-<tr>
-<td>defer        //延迟</td>
-<td>defer=”defer”</td>
-</tr>
-<tr>
-<td>ismap      //是否是服务器map的一部分</td>
-<td>ismap=”ismap”</td>
-</tr>
-<tr>
-<td>nohref     //不存在链接</td>
-<td>nohref=”nohref”</td>
-</tr>
-<tr>
-<td>noshade //去除阴影</td>
-<td>noshade=”noshade”</td>
-</tr>
-<tr>
-<td>nowrap   //不换行</td>
-<td>nowrap=”nowrap”</td>
-</tr>
-<tr>
-<td>multiple  //规定可同时选择多个选项</td>
-<td>multiple=”multiple”</td>
-</tr>
-<tr>
-<td>noresize  //不允许调整窗口尺寸</td>
-<td>noresize=”noresize”</td>
-</tr>
-</tbody>
-</table>
-<p>4.允许属性值不使用引号</p>
-<p>传统的XHTML，要求所有的属性值都必须用引号引起来，单HTML5允许直接给出属性值，即使不放在引号中也是正确的。</p>
-<p><strong>但是如果属性值包含空格等容易引起浏览器混淆的属性值，那么HTML5依然建议使用引号把这种特殊的属性值引用起来</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/11/第一章 01day/">展开全文 >></a>
         </p>
       
 
